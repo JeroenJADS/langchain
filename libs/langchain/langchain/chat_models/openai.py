@@ -201,7 +201,7 @@ class ChatOpenAI(BaseChatModel):
     # to support explicit proxy for OpenAI
     openai_proxy: Optional[str] = None
     request_timeout: Union[float, Tuple[float, float], Any, None] = Field(
-        default=None, alias="timeout"
+        default=60, alias="timeout"
     )
     """Timeout for requests to OpenAI completion API. Can be float, httpx.Timeout or 
         None."""
